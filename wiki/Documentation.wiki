@@ -11,7 +11,7 @@ But first, let's see some HTML.
 ==HTML==
 
 ===HTML elements===
-<img src="lib/images/doc/doc-elements.jpg" />
+<img src="http://www.kyrielles.net/sliderkit/lib/images/doc/doc-elements.jpg" />
 ====Slider container====
 
 CSS class name: `[cssprefix]`.
