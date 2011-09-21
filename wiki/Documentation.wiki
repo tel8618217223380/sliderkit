@@ -326,7 +326,8 @@ Let's take the Counter add-on example:
 {{{								
 <!-- Slider Kit core -->
 <script type="text/javascript" src="your_js_path/sliderkit.1.7.1.min.js"></script>
-	<!-- Slider Kit add-ons -->
+
+<!-- Slider Kit add-ons -->
 <script type="text/javascript" src="your_js_path/sliderkit.counter.js"></script>
 
 }}}
@@ -378,7 +379,8 @@ This add-on will make the capion textboxes slide over the panels area. See <a hr
 {{{
 <div class="sliderkit-panel">
     <a title="[title]" href="#"><img alt="[Alternative text]" src="your_image.jpg"></a>
-<br/>
+
+    <!-- Textbox -->
     <div class="sliderkit-panel-textbox">
         <div class="sliderkit-panel-text">
             <h4>Caption title</h4>
@@ -386,7 +388,8 @@ This add-on will make the capion textboxes slide over the panels area. See <a hr
         </div>
         <div class="sliderkit-panel-overlay"></div>
     </div>
-<br/>
+    <!-- // end of Textbox -->
+
 </div>
 }}}
 
