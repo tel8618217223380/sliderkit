@@ -14,31 +14,31 @@ But first, let's see some HTML.
 <img src="lib/images/doc/doc-elements.jpg" />
 ====Slider container====
 
-CSS class name: [cssprefix].
+CSS class name: `[cssprefix]`.
 This is the main container. It must have defined width and height values in the CSS. Because all of its child tags are in absolute position.
 ====Content panel====
-CSS class name: [cssprefix]-panel.
+CSS class name: `[cssprefix]`-panel.
 This is the sliding part. The content can be anything: images, text, news, etc.
 ====Previous button====
-CSS class name: [cssprefix]-go-btn [cssprefix]-go-prev.
+CSS class name: `[cssprefix]`-go-btn `[cssprefix]`-go-prev.
 This button will slide to the previous item. It can be placed anywhere inside the main container.
 ====Next button====
-CSS class name: [cssprefix]-go-btn [cssprefix]-go-next.
+CSS class name: `[cssprefix]`-go-btn `[cssprefix]`-go-next.
 This button will slide to the next item. It can be placed anywhere inside the main container.
 ====Caption/Text-box====
-CSS class name: [cssprefix]-panel-textbox.
+CSS class name: `[cssprefix]`-panel-textbox.
 It is mostly used over photos. It can be placed anywhere over the panel area.
 ====Nav/Carousel====
-CSS class name: [cssprefix]-nav.
+CSS class name: `[cssprefix]`-nav.
 This block contains navigation thumbnails. Thumbnail content can be anything, text or image.
 ====Nav previous button====
-CSS class name: [cssprefix]-nav-btn [cssprefix]-nav-prev.
+CSS class name: `[cssprefix]`-nav-btn `[cssprefix]`-nav-prev.
 This button will scroll the nav bar to the right. It must be placed in the nav container.
 ====Nav next button====
-CSS class name: [cssprefix]-nav-btn [cssprefix]-nav-next.
+CSS class name: `[cssprefix]`-nav-btn `[cssprefix]`-nav-next.
 This button will scroll the nav bar to the left. It must be placed in the nav container.
 
-[cssprefix] default value is "sliderkit". You can replace it with your own value.
+`[cssprefix]` default value is "sliderkit". You can replace it with your own value.
 
 
 ===HTML code===
@@ -91,7 +91,7 @@ Here is a representative HTML structure to be used with Slider Kit:
                 </div>
                 <div class="sliderkit-panel-overlay"></div>
             </div>
-								
+
         </div>
         
     </div><!-- // end of Panels container -->
@@ -112,7 +112,7 @@ It is required to make the plugin work properly. Of course you can paste it in y
 
 ===Skinning===
 In addition to the core CSS, you have to build a CSS skin to get the design you want.
-To help you in this hero quest, I wrote several CSS skins examples (check the demos pages to see them in action).								
+To help you in this hero quest, I wrote several CSS skins examples (check the demos pages to see them in action).
 The demos CSS file is sliderkit-demos.css. Feel free to explore this file and take what you need.
 ====Compatibility====
 For the sake of cross-browser compatibility, I added 3 CSS files for Internet Explorers (mainly for opacity and transparency problems):
@@ -120,7 +120,7 @@ For the sake of cross-browser compatibility, I added 3 CSS files for Internet Ex
 <li>sliderkit-demos-ie6.css.</li>
 <li>sliderkit-demos-ie7.css.</li>
 <li>sliderkit-demos-ie8.css.</li>
-</ul>							
+</ul>
 ====CSS advices====
 <ul>
 <li>Width and height values have to be set for the main container.</li>
@@ -159,8 +159,8 @@ The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
 </ul>
 ====Or Slider Kit add-ons:====
 <ul>
-<li>sliderkit.counter.js, to display items counter. Check the <a href="#availableaddons">available add-ons</a>.</li>
-<li>sliderkit.delaycaptions.js. Check the <a href="#availableaddons">available add-ons</a>.</li>
+<li>sliderkit.counter.js, to display items counter. Check the [#Slider_Kit_add-ons].</li>
+<li>sliderkit.delaycaptions.js. Check the [#Slider_Kit_add-ons].</li>
 </ul>
 
 ===Usage===
@@ -184,9 +184,9 @@ The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
 <!-- Slider Kit execution -->
 <script type="text/javascript">
     $(window).load(function(){
-	        
-		$(".anytagselector").sliderkit();
-	
+
+        $(".anytagselector").sliderkit();
+
     });
 </script>
 }}}
@@ -196,123 +196,123 @@ The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
 <!-- Slider Kit execution -->
 <script type="text/javascript">
     $(window).load(function(){
-		
-		$(".anytagselector").sliderkit({
-			shownavitems:5,
-			auto:false
-		});
-	
+        
+        $(".anytagselector").sliderkit({
+            shownavitems:5,
+            auto:false
+        });
+    
     });
 </script>
 }}}
 
 Check the 'Options' section below.
-			
+
 ===Options===				
 ====cssprefix====
-(string) <default is <em>"sliderkit"</em>. 
+(string) default is _"sliderkit"_. 
 The prefix to use on every CSS class names.
 ====start====
-(int) <default is <em>0</em>. 
+(int) default is _0_. 
 Set the start position. First is 0.
 ====auto====
-(boolean) <default is <em>true</em>. 
+(boolean) default is _true_. 
 Activate auto-scrolling.
 ====autospeed====
-(int) <default is <em>4000</em>. 
+(int) default is _4000_. 
 Set the auto-scrolling speed (ms).
 ====mousewheel====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Activate the mousewheel navigation.
 ====keyboard====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Activate the keyboard navigation. Very basic for now (left/right arrows only).
 ====circular====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Activate the infinite nav scroll.
 ====shownavitems====
-(int) <default is <em>5</em>. 
+(int) default is _5_. 
 Defines how many thumbnails to display in the nav clip.
 ====navitemshover====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 If set the panels will slide on nav thumbnails mouseover (by default panels slide on click).
 ====navclipcenter====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Defines if the nav clip must be center-aligned in the nav container.
 ====navcontinuous (from v1.3)====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 If set to true, will make the carousel scroll continuously (use this option with a "linear" scrolleasing).
 ====navscrollatend (from v1.5)====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 If set to 'true', will make the carousel scroll if a line first or last thumbnail is clicked.
 ====navpanelautoswitch (from v1.6)====
-(boolean) <default is <em>true</em>. 
+(boolean) default is _true_. 
 If set to 'false', will make the navbar scroll without switching panels.
 ====navfx====
-(string) <default is <em>"sliding"</em>. 
+(string) default is _"sliding"_. 
 Define the carousel transition effect. Possible values: "sliding", "none"
 ====navfxbefore (from v1.7)====
-(function) <default is: <em>function(){}</em>. 
+(function) default is: _function(){}_. 
 The function called before the nav transition start.
 ====navfxafter (from v1.7)====
-(function) <default is: <em>function(){}</em>. 
+(function) default is: _function(){}_. 
 The function called before the nav transition start.
 ====scroll====
-(int) <default is <em>equal to 'shownavitems' option value</em>. 
+(int) default is _equal to 'shownavitems' option value_. 
 Defines how many nav thumbnails must be scrolled when nav buttons are clicked. Can't be greater than the 'shownavitems' option value.
 ====scrollspeed====
-(int) <default is <em>600</em>. 
+(int) default is _600_. 
 Set the nav scroll speed (ms).
 ====scrolleasing====
-(string) <default is <em>"swing"</em>. 
+(string) default is _"swing"_. 
 Add an easing effect to the nav slide transition.Default jQuery easing functions are "swing" or "linear". Other effects can be added with the jQuery easing plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a>.
 ====panelfx====
-(string) <default is <em>"fading"</em>. 
+(string) default is _"fading"_. 
 Define the panels transition effect. Possible values: "fading", "sliding", "none"
 ====panelfxspeed====
-(int) <default is <em>700</em>. 
+(int) default is _700_. 
 Set the panel slide transition effect speed (ms).
 ====panelfxeasing====
-(string) <default is <em>"swing"</em>. 
+(string) default is _"swing"_. 
 Add an easing effect to the panel slide transition.Default jQuery easing functions are "swing" or "linear". Other effects can be added with the jQuery easing plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a>
 ====panelfxfirst (from v1.5)====
-(string) <default is <em>"none"</em>. 
+(string) default is _"none"_. 
 Add a transition effect on the first displayed item. There are only 2 possible values for the moment: "fading" or "none".			
 ====panelfxbefore====
-(function) <default is <em>function(){}</em>. 
+(function) default is _function(){}_. 
 The function called before the panel transition start.
 ====panelfxafter====
-(function) <default is <em>function(){}</em>. 
+(function) default is _function(){}_. 
 The function called when panel transition is over.
 ====panelbtnshover====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 If set to true, go buttons will fade in/out on panel mouseover.
 ====panelclick====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Activate the 1-click navigation.
 ====verticalnav====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Set the nav clip direction to vertical.
 ====verticalslide====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Set the panel sliding direction to vertical (only if "panelfx" is defined as "sliding").
 ====tabs====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Required to build a tabs menu.
 ====freeheight====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Use panels with no fixed height (in this case, 'panelfx' value can't be "sliding").
 ====fastchange====
-(boolean) <default is <em>true</em>. 
+(boolean) default is _true_. 
 By default the user can slide to the next content even if the slider is still running. You can stop this behavior by setting the "fastchange" option to false.
 ====counter (from v1.7.1)====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Will activate the Slider Kit 'Counter' add-on.
 ====delaycaption (from v1.7.1)====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 Will activate the Slider Kit 'DelayCaption' add-on.
 ====debug====
-(boolean) <default is <em>false</em>. 
+(boolean) default is _false_. 
 If set to true, the script will stop on errors and return error code values. Check documentation.
 
 
@@ -337,11 +337,11 @@ Let's take the Counter add-on example:
 <!-- Slider Kit launching -->
 <script type="text/javascript">
     $(window).load(function(){
-	        
-		$(".anytagselector").sliderkit({
-			counter:true
-		});
-	
+
+        $(".anytagselector").sliderkit({
+            counter:true
+        });
+
     });
 </script>
 }}}
@@ -418,23 +418,23 @@ This add-on will make the capion textboxes slide over the panels area. See <a hr
 
 ====Available options====
 ====delay====
-(int) <default is: <em>400</em>. 
+(int) default is: _400_. 
 Textbox delay value (ms).
 
 ====position====
-(string) <default is: <em>"bottom"</em>. 
+(string) default is: _"bottom"_. 
 Only for "sliding" transition: set the slide starting position. Possible values: "top", "right", "bottom", "left".
 
 ====transition====
-(string) <default is: <em>"sliding"</em>. 
+(string) default is: _"sliding"_. 
 Transition type. Possible values: "sliding", "fading".
 
 ====duration====
-(int) <default is: <em>300</em>. 
+(int) default is: _300_. 
 Transition duration (ms).
 
 ====easing====
-(string) <default is: <em>"linear"</em>. 
+(string) default is: _"linear"_. 
 Optional easing on transition effect.
 
 
