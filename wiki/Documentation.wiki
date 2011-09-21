@@ -159,8 +159,8 @@ The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
 </ul>
 ====Or Slider Kit add-ons:====
 <ul>
-<li>sliderkit.counter.js, to display items counter. Check the [#Slider_Kit_add-ons].</li>
-<li>sliderkit.delaycaptions.js. Check the [#Slider_Kit_add-ons].</li>
+<li>sliderkit.counter.js, to display items counter. Check the [Slider_Kit_add-ons].</li>
+<li>sliderkit.delaycaptions.js. Check the [Slider_Kit_add-ons].</li>
 </ul>
 
 ===Usage===
