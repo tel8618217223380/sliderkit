@@ -87,7 +87,7 @@ Here is a representative HTML structure to be used with Slider Kit:
             <div class="sliderkit-panel-textbox">
                 <div class="sliderkit-panel-text">
                     <h4>Caption title</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 </div>
                 <div class="sliderkit-panel-overlay"></div>
             </div>
@@ -151,7 +151,7 @@ For the sake of cross-browser compatibility, I added 3 CSS files for Internet Ex
 ==Javascript==
 
 ===Library===
-The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
+The main javascript file is currently jquery.sliderkit.1.9.pack.js (packed).
 ====You can optionally use jQuery add-ons:====
 <ul>
 <li>jquery.easing.1.3.min.js, for easing effects on transitions. Check the <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">easing plugin homepage</a>.</li>
@@ -175,7 +175,7 @@ The main javascript file is currently jquery.sliderkit.1.7.1.min.js (packed).
 
 
 <!-- Slider Kit core -->
-<script type="text/javascript" src="your_js_path/jquery.sliderkit.1.7.1.min.js"></script>
+<script type="text/javascript" src="your_js_path/jquery.sliderkit.1.9.pack.js"></script>
 
 <!-- Slider Kit add-ons (optional) -->
 <script type="text/javascript" src="your_js_path/sliderkit.counter.js"></script>
@@ -268,7 +268,7 @@ Set the nav scroll speed (ms).
 Add an easing effect to the nav slide transition.Default jQuery easing functions are "swing" or "linear". Other effects can be added with the jQuery easing plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a>.
 ====panelfx====
 (string) default is _"fading"_. 
-Define the panels transition effect. Possible values: "fading", "sliding", "none"
+Define the panels transition effect. Possible values: "fading", "sliding", "none" + (from v1.9) "fancy" => see the 'imagefx' option below.
 ====panelfxspeed====
 (int) default is _700_. 
 Set the panel slide transition effect speed (ms).
@@ -311,6 +311,8 @@ Will activate the Slider Kit 'Counter' add-on.
 ====delaycaption (from v1.7.1)====
 (boolean) default is _false_. 
 Will activate the Slider Kit 'DelayCaption' add-on.
+====imagefx (from v1.9)====
+(array) default is _false_. Slider Kit ImageFx add-on parameters. Use it with 'fancy' panelfx transition.
 ====debug====
 (boolean) default is _false_. 
 If set to true, the script will stop on errors and return error code values. Check documentation.
@@ -325,7 +327,7 @@ From version 1.7, in order to keep a lightweight plugin core, new Slider Kit fun
 Let's take the Counter add-on example:
 {{{								
 <!-- Slider Kit core -->
-<script type="text/javascript" src="your_js_path/sliderkit.1.7.1.min.js"></script>
+<script type="text/javascript" src="your_js_path/jquery.sliderkit.1.9.pack.js"></script>
 
 <!-- Slider Kit add-ons -->
 <script type="text/javascript" src="your_js_path/sliderkit.counter.js"></script>
@@ -384,7 +386,7 @@ This add-on will make the capion textboxes slide over the panels area. See <a hr
     <div class="sliderkit-panel-textbox">
         <div class="sliderkit-panel-text">
             <h4>Caption title</h4>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
         </div>
         <div class="sliderkit-panel-overlay"></div>
     </div>
@@ -439,6 +441,102 @@ Transition duration (ms).
 ====easing====
 (string) default is: _"linear"_. 
 Optional easing on transition effect.
+
+
+
+==='Timer' add-on===
+While auto-scrolling, this add-on will display a progress bar illustrating the time remaining before the next panel appears. See the <a href="demos/timer.html" target="_blank">demo page</a>.
+====HTML code (outside of the panels container)====
+{{{
+<!-- Default 'timer' tag -->
+<div class="sliderkit-timer"></div>
+
+<!-- Custom 'timer' tag example -->
+<div class="sliderkit-timer-wrapper">
+	<div class="sliderkit-timer"></div>
+</div>
+}}}
+<ul>
+	<li>If no 'timer' HTML tag is found, the script will generate the default one.</li>
+	<li>If you go with your own timer block, make sure you place it outside of the panels container ('sliderkit-panels').</li>
+</ul>
+====In the `<head>` section of the HTML page:====
+{{{
+<!-- Slider Kit launching -->
+<script type="text/javascript">
+	$(window).load(function(){
+			
+		$(".anytagselector").sliderkit({
+			timer:{
+				fadeout:0.2
+			}
+		});
+	});
+</script>
+}}}
+====Available options====
+====fadeout====
+(float) default is: 1. 
+Opacity value for the animation fadeout effect. Possible values: float numbers between 0 and 1. Ex: 0.2.
+
+==='ImageFx' add-on===
+Slider Kit ImageFx add-on was built from jqFancyTransitions jQuery plugin by Ivan Lazarevic (Examples and documentation at: <a href="http://www.workshop.rs/projects/jqfancytransitions" target="_blank">http://www.workshop.rs/projects/jqfancytransitions</a>).
+It provides Slider Kit images slideshows with 4 fancy transitions effects.
+ImageFx only works for images. See the <a href="demos/imagefx.html" target="_blank">demo page</a>
+====In the `<head>` section of the HTML page:====
+{{{
+<!-- Slider Kit launching -->
+<script type="text/javascript">
+	$(window).load(function(){
+
+		<!-- Simple usage -->
+		$(".anytagselector").sliderkit({
+			panelfx: 'fancy',
+			imagefx: {
+				fxType: 'zipper'
+			}
+		});
+
+		<!-- Full usage -->
+		$(".anytagselector").sliderkit({
+			panelfx: 'fancy',
+			imagefx: {
+				fxType: 'curtain',
+				fxDelay: 50,
+				fxDuration: 1000,
+				strips: 8,
+				stripOrientation: 'reverse',
+				stripPosition: 'default',
+				stripDirection: 'default'
+			}
+		});
+
+	});
+</script>
+}}}
+====Available options====
+====fxType====
+(string) default is: 'curtain'. 
+Image transition type. Available values: 'curtain', 'zipper', 'wave', 'fountain', 'random'.
+====fxDelay====
+(int) default is: 60. 
+Delay between each strip, in ms. The higher value, the slower is the animation.
+====fxDuration====
+(int) default is: 500. 
+Strip animation duration, in ms. The higher value, the slower is the animation.
+====strips====
+(int) default is: 10. 
+Number of strips.
+====stripOrientation====
+(string) default is: 'default'. 
+Available values: 'default' (vertical strips), or 'reverse' (horizontal strips).
+====stripPosition====
+(string) default is: 'default'. 
+Start position. Available values: 'default' (default position is 'top' if 'stripOrientation' is vertical, 'left' if horizontal), or 'reverse' (reverse position is 'bottom' if 'stripOrientation' is vertical, 'right' if horizontal).
+====stripDirection====
+(string) default is: 'default'. 
+Available values: 'default' (default direction is 'top to bottom' if 'stripOrientation' is vertical, 'left to right' if horizontal), or 'reverse' (reverse direction is 'bottom to top' if 'stripOrientation' is vertical, 'right to left' if horizontal). Extra value: 'auto' (only for 'curtain' effect).
+
 
 
 ==Extending Slider Kit==
