@@ -1,34 +1,36 @@
-<h2>Common errors</h2>
-							<p>If you are having trouble running the plugin, start by checking these basic points:</p>
-							<ul>
-								<li>The slider main container must have defined width and height values in the CSS (height can be null if the "freeheight" option is activated). Otherwise, default values (500x350) will be taken.</li>
-								<li>The CSS class names over the HTML tags must be respected (check the <a href="#htmlelements">HTML elements</a> section).</li>
-								<li>If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.</li>
-								<li>If you are imbricating sliders, they must have different 'cssprefix' values.</li>
-								<li>Globally, many errors come from CSS bugs. In doubt, checking the demos CSS file might help.</li>
-							</ul>
-							<h2>Debug mode</h2>
-							<p>To help you finding what's wrong with your plugin installation, you can activate the debug mode option:</p>
-							<pre><em class="code-setting">debug:</em><em class="code-value">true</em></pre>
-							<p>The script will stop on errors during its execution and display codes:</p>
-							<ul>
-								<li><span class="code-error">"Error #01"</span>: (HTML issue) At least a carousel or a panel set must be found in the HTML.</li>
-								<li><span class="code-error">"Error #02"</span>: (CSS issue) You must define the slider height or width values in the CSS. Default values are taken if not.</li>
-								<li><span class="code-error">"Error #03"</span>: (HTML issue) If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.</li>
-								<li><span class="code-error">"TypeError: this.Counter is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> Counter add-on is missing.</li>
-								<li><span class="code-error">"TypeError: this.DelayCaption is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> DelayCaption add-on is missing.</li>
-								<li><span class="code-error">"TypeError: this.Timer is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> Timer add-on is missing.</li>
-								<li><span class="code-error">"TypeError: this.ImageFx is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> ImageFx add-on is missing.</li>
-								<li><span class="code-error">"DelayCaption #01"</span>: (HTML issue) No textbox found in the slider.</li>
-								<li><span class="code-error">"DelayCaption #02"</span>: (CSS issue) The textbox element must have specified width/height values in the CSS.</li>
-								<li><span class="code-error">"DelayCaption #03"</span>: (JS Info) 'obj.options.autospeed' option value has been increased to fit animation duration.</li>
-								<li><span class="code-error">"ImageFx #01"</span>: (HTML issue) No image was found in the panels container. ImageFx only applies on images.</li>
-								<li><span class="code-error">"ImageFx #02"</span>: (JS issue) The image effect name doesn't exist. Default name is taken instead.</li>
-								<li><span class="code-error">"ImageFx #03"</span>: (HTML issue) No image was found in the current panel container. The transition is aborted.</li>
-							</ul>
+=Troubleshooting=
+==Common errors==
 
-							<h2>Report an issue</h2>
-							<p>If you find an issue using <span class="code-sitename">Slider Kit</span>, thanks to <a href="http://code.google.com/p/sliderkit/issues/list" target="_blank">report it</a>.</p>
-							
-							<h2>Online help</h2>
-							<p>If you still can't find a solution to your problem, try the <a href="http://groups.google.com/group/sliderkit" target="_blank">Slider Kit jQuery plugin Google Group</a>.
+If you are having trouble running the plugin, start by checking these basic points:
+
+ * The slider main container must have defined width and height values in the CSS (height can be null if the "freeheight" option is activated). Otherwise, default values (500x350) will be taken.
+ * The CSS class names over the HTML tags must be respected (check the <a href="#htmlelements">HTML elements</a> section).
+ * If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.
+ * If you are imbricating sliders, they must have different 'cssprefix' values.
+ * Globally, many errors come from CSS bugs. In doubt, checking the demos CSS file might help.
+
+==Debug mode==
+To help you finding what's wrong with your plugin installation, you can activate the debug mode option:
+debug:true
+The script will stop on errors during its execution and display codes:
+
+ * "Error #01": (HTML issue) At least a carousel or a panel set must be found in the HTML.
+ * "Error #02": (CSS issue) You must define the slider height or width values in the CSS. Default values are taken if not.
+ * "Error #03": (HTML issue) If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.
+ * "TypeError: this.Counter is not a function...": (JS issue) The Slider Kit Counter add-on is missing.
+ * "TypeError: this.DelayCaption is not a function...": (JS issue) The Slider Kit DelayCaption add-on is missing.
+ * "TypeError: this.Timer is not a function...": (JS issue) The Slider Kit Timer add-on is missing.
+ * "TypeError: this.ImageFx is not a function...": (JS issue) The Slider Kit ImageFx add-on is missing.
+ * "DelayCaption #01": (HTML issue) No textbox found in the slider.
+ * "DelayCaption #02": (CSS issue) The textbox element must have specified width/height values in the CSS.
+ * "DelayCaption #03": (JS Info) 'obj.options.autospeed' option value has been increased to fit animation duration.
+ * "ImageFx #01": (HTML issue) No image was found in the panels container. ImageFx only applies on images.
+ * "ImageFx #02": (JS issue) The image effect name doesn't exist. Default name is taken instead.
+ * "ImageFx #03": (HTML issue) No image was found in the current panel container. The transition is aborted.
+
+
+==Report an issue==
+If you find an issue using Slider Kit, thanks to <a href="http://code.google.com/p/sliderkit/issues/list" target="_blank">report it</a>.
+
+==Online help==
+If you still can't find a solution to your problem, try the <a href="http://groups.google.com/group/sliderkit" target="_blank">Slider Kit jQuery plugin Google Group</a>.
